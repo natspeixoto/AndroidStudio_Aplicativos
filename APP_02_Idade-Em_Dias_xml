@@ -1,0 +1,54 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@color/Accent">
+
+
+    <EditText
+        android:id="@+id/txt_Ano"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a Idade - Ano(s)"
+        android:inputType="number"
+        android:textAlignment="center"/>
+
+
+
+    <EditText
+        android:id="@+id/txt_Mes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a Idade - Mes(es)"
+        android:inputType="number"
+        android:textAlignment="center"/>
+
+
+
+    <EditText
+        android:id="@+id/txt_Dia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite a Idade - Dia(s)"
+        android:inputType="number"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btn_Converter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Converter para dias"
+        android:textAligment="center"/>
+
+    <TextView
+        android:id ="@+id/txt_Resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize = "25sp"/>
+
+</LinearLayout>
