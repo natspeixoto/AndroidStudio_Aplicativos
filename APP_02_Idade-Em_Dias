@@ -1,0 +1,40 @@
+package com.example.app_02_idade_em_dias
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.EditText
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val txt_Ano = findViewById<EditText>(R.id.txt_Ano)
+        val txt_Mes = findViewById<EditText>(R.id.txt_Mes)
+        val txt_Dia = findViewById<EditText>(R.id.txt_Dia)
+        val txt_Resultado = findViewById<EditText>(R.id.txt_Resutado)
+
+       btn_Converter.setOnClickListener { it: View!
+           
+           if (txt_Ano.text.isEmpty()) {
+               txt_Ano.error = "Digite a quantidade de ano(s)"
+
+           }else if (txt_Mes.text.isEmpty()){
+               txt_Ano.error = "Digite a quantidade de mes(es)"
+
+           }else if (txt_Dia.text.isEmpty()){
+               txt_Ano.error = "Digite a quantidade de dia(s)"
+           }else{
+
+               val ano = txt_Ano.text.toString().toInt()
+               val mes = txt_Mes.text.toString().toInt()
+               val dia = txt_Dia.text.toString().toInt()
+               val resultado: Int
+               resultado = ano * 360 + mes * 30 + dia
+               txt_Resultado.text = "Tua idade corresponde a $resultado dias!"
+               
+            }
+        }
+    }
+}
