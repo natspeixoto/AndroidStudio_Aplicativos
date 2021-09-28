@@ -1,0 +1,40 @@
+package com.example.app_03_celsius_para_fahrenheit
+
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.EditText
+import android.widget.TextView
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        class MainActivity : AppCompatActivity() {
+            fun onCreate(savedInstanceState: Bundle?, btn_Converter: Any) {
+                super.onCreate(savedInstanceState)
+                setContentView(R.layout.activity_main)
+
+                val txtCelsius = findViewById<EditText>(R.id.txtCelsius)
+                val txt_Resultado = findViewById<TextView>(R.id.txt_Resultado)
+
+                btn_Converter.setOnClickListener {
+                    if (txtCelsius.text.isEmpty()) {
+                        txtCelsius.error = "Digite a temperatura em Celsius"
+                    } else {
+                        val celsius = txtCelsius.text.toString().toDouble()
+                        val resultado: Double
+                        resultado = (9 * celsius + 160) / 5
+                        txt_Resultado.text = "$celsius Graus Celsius equivale a $resultado Graus " +
+                                "Fahrenheit"
+                        txtCelsius.text.clear()
+                    }
+                }
+            }
+        }
+    }
+}
+
+private fun Any.setOnClickListener(function: () -> Unit) {
+
+}
